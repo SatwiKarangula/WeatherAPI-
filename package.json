@@ -1,5 +1,5 @@
 {
-  "name": "project",
+  "name": "weather-api",
   "version": "1.0.0",
   "description": "This is a simple backend application developed using Node.js and Express.js. The application fetches real-time weather data from the OpenWeather public API and exposes custom REST API endpoints.",
   "main": "index.js",

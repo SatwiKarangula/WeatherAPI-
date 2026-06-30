@@ -1,4 +1,4 @@
-const Weather = require('../models/Weather');
+const Weather = require('../models/weather');
 const axios = require('axios');
 
 exports.createWeather = async (req, res) => {
@@ -193,14 +193,14 @@ exports.fetchAndStoreWeather = async (req, res) => {
 
         });
 
-    } catch (error) {
+    } 
+    catch (error) {
 
-        res.status(500).json({
+    console.log(error.response?.data || error.message);
 
-            error: 'Failed to fetch weather data'
+    res.status(500).json({
+        error: error.response?.data || error.message
+    });
 
-        });
-
-    }
-
+}
 };
